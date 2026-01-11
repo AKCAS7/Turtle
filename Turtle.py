@@ -3,7 +3,6 @@
 from turtle import Turtle, Screen
 
 turtle = Turtle()
-screen = Screen()
 turtle.shape("turtle")
 turtle.color("red")
 
@@ -23,3 +22,4 @@ square()
 
 screen = Screen()
 screen.exitonclick()
+
