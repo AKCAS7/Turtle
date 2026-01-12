@@ -6,40 +6,26 @@ t = Turtle()
 t.shape("turtle")
 screen = Screen()
 side_length = int(input("What would you like your side length to be ? "))
-#shape 1 triangle
-def draw_triangle(side_length):
-    for _ in range(2):
+
+def draw_polygon(t, sides, side_length):
+    angle = 360 / sides
+    for _ in range(sides):
         t.forward(side_length)
-        t.left(60)
+        t.left(angle)
     t.home()
 
-draw_triangle(side_length)
-
+# Triangle
+draw_polygon(t, 3, side_length)
 t.clear()
 
-#shape 2 square
-
-def draw_square(side_length):
-     for _ in range(4):
-         t.forward(side_length)
-         t.left(90)
-
-draw_square(side_length)
-
-t.clear()
-#shape 3 pentagon
-
-def draw_pentagon(side_length):
-   for _ in range(5):
-       t.forward(side_length)
-       t.left(72)
-
-draw_pentagon(side_length)
-
+# Square
+draw_polygon(t, 4, side_length)
 t.clear()
 
-
-
+# Pentagon
+draw_polygon(t, 5, side_length)
+t.clear()
 
 screen.exitonclick()
    
+
